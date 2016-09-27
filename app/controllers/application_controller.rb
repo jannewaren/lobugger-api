@@ -12,5 +12,7 @@ class ApplicationController < ActionController::API
     puts "Body:"
     ap JSON.parse(request.body.read)
     puts "---"
+
+    render :ok
   end
 end
