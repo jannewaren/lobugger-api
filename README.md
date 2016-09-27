@@ -1,24 +1,9 @@
-# README
+# lobugger-api
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Rails --api application that doesn't do too much. It just..
 
-Things you may want to cover:
+1. catches all requests
+2. prints out the params, headers and body nicely to console
+3. does nothing
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Useful for looking at the requests you are generating somewhere else. For example while developing something that calls an API, but you don't have access to that API yet.
