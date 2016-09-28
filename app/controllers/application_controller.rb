@@ -10,7 +10,12 @@ class ApplicationController < ActionController::API
     ap request.env.select {|k,v| k.match("^HTTP.*")}
 
     puts "Body:"
-    ap JSON.parse(request.body.read)
+    begin
+      ap JSON.parse(request.body.read)
+    rescue JSON::ParserError
+      puts "Not a JSON body.. but here it is:"
+      ap request.body.read
+    end
     puts "---"
 
     render :ok
